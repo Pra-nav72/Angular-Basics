@@ -1,0 +1,39 @@
+<hr>
+<div class="event-binder-1">
+    <hr>
+    <p class="details">tutorial URL: {{tutorialURL}}</p>
+    <hr>
+    <p class="details">video Details: {{videoDetails}}</p>
+    <br><br>
+    <input 
+        type="text" 
+        placeholder="logs input" 
+        (input)="handleInput($event)"
+        (change)="onChange($event)"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        (paste)="onPaste($event)"
+        (cut)="onCut($event)"
+        (copy)="onCopy($event)"
+    >
+    <br>
+    <div class="event-binder-div">
+        <div>
+            <p class="event-binder-output">{{changes}}  : {{eventType}}</p>
+            <p class="event-binder-output">isFocused: {{isFocused}}</p>
+            <p class="event-binder-output">final input: {{inputData}}</p>
+        </div>
+        <div>
+            <p class="event-binder-output">copy(ctrl + C): {{copyData}}</p>
+            <p class="event-binder-output">cut(ctrl + X): {{cutData}}</p>
+            <p class="event-binder-output">pasted(ctrl + V): {{pasteData}}</p>
+        </div>
+    </div>
+    <hr><hr>
+    <p class="mouse-events-output">Mouse Related events ***  <span class="sp">{{isHover}}</span>  ***</p>
+    <div 
+    class="mouse-events"
+    (mouseenter)="onHover($event.type)"
+    (mouseleave)="onLeave($event.type)"
+    ></div>
+</div>

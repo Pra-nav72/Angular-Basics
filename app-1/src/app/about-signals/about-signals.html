@@ -1,0 +1,18 @@
+<hr> Signals <hr>
+<div class="Signals">
+    <div class="writable">
+    
+        <h2>count: {{count}}</h2>
+        <h2>count(): {{increment()}}</h2>
+        
+        <button class="btn-primary" (click)="onClick()">increase</button>
+    </div>
+    <div class="writable">
+        <h2 [style.fontSize.px]="size()">Area: {{area()}}</h2>
+        <h2>width: {{width()}}</h2>
+        <h2>Height: {{height()}}</h2>
+        <button class="btn-secondary" (click)="updateWidth()">update width</button>
+        <button class="btn-primary" (click)="updateHeight()">update height</button>
+    </div>
+</div>
+<hr><hr>

@@ -1,0 +1,11 @@
+<hr><hr>
+<p>using Conditional (if-else) inside html</p>
+<hr>
+<div>
+    @if(isLogin()){
+        <h1>User Logged in!</h1>
+    }@else{
+        <h1>you're logged out, please log in</h1>
+    }
+    <button class="btn-primary" (click)="toggle()" [value]="isOn()">{{isOn()}}</button>
+</div>

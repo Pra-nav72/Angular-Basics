@@ -1,0 +1,20 @@
+*{
+    background-color: lightcoral;
+    margin: 0;
+}
+
+div{
+    padding: 1rem;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+span{
+    padding: .2rem;
+    border: none;
+    border-bottom: 2px dashed blueviolet;
+    color: white;
+    margin: 0 30%;
+    font-size: 3rem;
+}

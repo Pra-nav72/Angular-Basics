@@ -1,0 +1,15 @@
+*{
+    background-color: greenyellow;
+    margin: 0;
+}
+div{
+    padding: 1rem 3rem;
+}
+
+input{
+    background-color: white;
+    padding: .3rem .8rem;
+    border: none;
+    border-bottom: 2px solid rgb(252, 98, 21);
+    border-radius: .3rem;
+}

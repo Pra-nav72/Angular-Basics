@@ -1,0 +1,41 @@
+.p1{
+    background-color: rgb(158, 69, 241);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2vh;
+    margin: 2vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw;
+    min-height: 8vw;
+    margin: 1vw;
+    min-width: 8vw;
+    padding: 1vh;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover{
+    box-shadow: 3px 3px 14px black;
+}
+
+.btn:active{
+    transform: translateY(1vh);
+}
+
+.count{
+    padding: 3vh;
+    background-color: black;
+    min-width: 3vw;
+    text-align: center;
+    border-radius: .5vw;
+    font-size: large;
+}

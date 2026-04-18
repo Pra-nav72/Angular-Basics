@@ -1,0 +1,42 @@
+<hr>
+    <h1>Two Way Data Binding</h1>
+    <hr>
+    <div>
+        <h2>1. using signal and property binding </h2><br>
+        <!-- binding 1. displaying the .ts file's name -->
+        <h3>{{name()}}</h3><br>
+        <!-- binding 2. changing name() value based on UI input changes -->
+        <input 
+        type="text" 
+        [value]="name()" 
+        (input)="name.set($event.target.value)"
+        style="background-color: aliceblue;">
+    </div>
+    <hr>
+    <div>
+        <h2>2. using [(ngModel)] </h2><br><br>
+        <p style="font-size: x-large; color: red; font-weight: bolder;">
+            you have to import [formModule] in .ts file inorder to use [(ngModel)]
+        </p><br>
+        <span>  [ ] used for property binding, () for (input) event... are used in [(ngModel)] </span>
+        <br>
+        <span>[ngModel]="age" (ngModelChange)="age=$event"  ----- this is longer way of doing the same.</span>
+        <br>
+        <span>you can't use [(ngModel)]="name()" , that's why we use getter/setters with signals</span>
+        <h3>age: {{uAge}}</h3><br>
+        <!-- have import formModule in .ts to use [(ngModel)] -->
+        <input type="number", [(ngModel)]="uAge">
+    </div>
+    <hr>
+    <div>
+        <h2>manipulating using objects</h2><br>
+        <h3>{{user().name}}</h3>
+        <input type="text" [value]="user().name"  [(ngModel)]="user().name">
+        <br>
+        <h3>{{user().age}}</h3>
+        <input type="number" [value]="user().age"  [(ngModel)]="user().age">
+        <br>
+        <h3>{{user().email}}</h3>
+        <input type="text" [value]="user().email"  [(ngModel)]="user().email">
+    </div>
+<hr><hr>

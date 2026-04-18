@@ -1,0 +1,34 @@
+<hr />
+<hr />
+<div>
+  <h1>Switch Cases</h1>
+  <select (change)="handleSelect($event)"
+    style="background-color: greenyellow;
+        padding: .3rem .6rem;
+        margin: .5rem;
+    ">
+    <option value="not started">not started</option>
+    <option value="init">initialize</option>
+    <option value="fired">start</option>
+    <option value="pending">configure</option>
+    <option value="none">none</option>
+  </select><br>
+  @switch (status()) {
+    @case ('not started') {
+      <span>Not started yet!</span>
+    }
+    @case ('init') {
+      <span style="color: blueviolet;">ready to go!!</span>
+    }
+    @case ('fired') {
+      <span style="color: green;">processing!!</span>
+    }
+    @case ('pending') {
+      <span style="color: yellow;">working on it...</span>
+    }
+    @default{
+        <span style="color: red;">something went wrong!!!</span>
+    }
+  }
+</div>
+<hr />

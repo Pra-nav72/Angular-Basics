@@ -1,0 +1,20 @@
+*{
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0 1.5rem;
+    font-family: monospace;
+    /* align-items: center; */
+    /* justify-items: center; */
+}
+
+
+.divUl{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: bisque;
+    font-size: larger; 
+    font-weight: bolder"
+}
+li{
+    font-size: large;
+}

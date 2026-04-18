@@ -1,0 +1,42 @@
+.event-binder-1{
+    background-color: rgb(250, 155, 39);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2vw;
+}
+
+.details{
+    background-color: aquamarine;
+    padding: 0.2vw;
+}
+
+.event-binder-output{
+    background-color: blueviolet;
+    padding: 1.3vw;
+    color: white;
+    min-width: 20vw;
+
+}
+.event-binder-div{
+    display: flex;
+    flex-direction: column;
+}
+.event-binder-div div{
+    display: flex;
+    gap: 1vh;
+}
+
+.mouse-events{
+    justify-self: center;
+    width: 8vw;
+    height: 8vw;
+    background-color: red;
+}
+.mouse-events-output{
+    justify-self: center;
+    font-size: large;
+    font-family: monospace;
+}
+.sp{
+    color: rgb(0, 47, 255);
+}

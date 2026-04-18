@@ -1,0 +1,42 @@
+.btn-primary{
+    min-width: 6vw;
+    border: none;
+    background-color: chocolate;
+    border-radius: 0.5vw;
+    color: white;
+    cursor: pointer;
+    padding: 0.8vw 1.2vw;
+    margin: .5vw 1vw;
+    box-shadow: 0 0 2px rgb(83, 12, 149);
+    font-weight: bold;
+    transition: all .2s ease-in;
+}
+.btn-primary:hover{
+    box-shadow: 0 0 12px blueviolet;
+    background-color: rgb(237, 129, 52);
+}
+.btn-primary:active{
+    transform: translateY(2px);
+}
+
+.btn-secondary{
+    min-width: 6vw;
+    border-top: none;
+    border: none;
+    background-color: rgb(83, 11, 190);
+    border-radius: 0.5vw;
+    color: white;
+    cursor: pointer;
+    padding: 0.8vw 1.2vw;
+    margin: .5vw 1vw;
+    box-shadow: 0 0 2px rgb(1, 61, 86);
+    font-weight: bold;
+    transition: all .2s ease-in;
+}
+.btn-secondary:hover{
+    box-shadow: 0 0 12px rgb(1, 61, 86);
+    background-color: rgb(113, 40, 224);
+}
+.btn-secondary:active{
+    transform: translateY(2px);
+}

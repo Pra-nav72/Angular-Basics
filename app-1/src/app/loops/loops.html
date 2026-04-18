@@ -1,0 +1,46 @@
+<hr />
+<h1>Loops iterations!!</h1>
+<hr />
+<h3>for loops</h3>
+
+<div style="padding: 1rem 4rem">
+  <div class="divUl">
+    <ul>
+      <h4>Array</h4>
+      <!-- track should be unique (if contains multiple same 'name', assign id with them in .ts file ) -->
+      @for (name of names(); track name) {
+        <!-- $index tracks the indeces of the elements -->
+        @for (index of name; track $index) {
+          @if ($index === 0) {
+            <li>{{ index }}... {{ name }}</li>
+          }
+        }
+      }
+    </ul>
+  </div>
+
+  <div class="divUl">
+    <ul>
+      <h4>Object</h4>
+      <!-- track should be unique -->
+      @for (info of userDetail(); track info.id) {
+        <li>name: {{ info.name }}</li>
+        <li>roll: {{ info.roll }}</li>
+        <li>div: {{ info.div }}</li>
+        <li>college: {{ info.college }}</li>
+      }
+    </ul> <br><br>
+    <p>
+        it provides multiple built-in contextual variables <br>
+        $index == for current index <br>
+        $first == true if its first elements <br>
+        $last == true it its last elements <br>
+        $count == Total number of items in the collection <br>
+        $even == true if index is even (0, 2, 4...) <br>
+        $odd == true if index is odd (1, 3, 5...) <br>
+
+    </p>
+  </div>
+</div>
+
+<hr />
