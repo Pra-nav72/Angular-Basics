@@ -1,0 +1,37 @@
+<div style="justify-self: center; min-width: 80%; padding: .2rem;">
+
+    <h3>Using nested *ngFor loop</h3><br>
+    <ul *ngFor="let std of students()">
+        <li>{{std.name}} : {{std.roll}} : {{std.email}}</li>
+        <span *ngFor="let skill of std.skills"> {{skill}}, </span>
+    </ul> 
+
+    <br><hr><br>
+    <h3>Using nested *ngIf: </h3><br>
+    <ul *ngIf="isShow()">
+        <li>showing becoz isshow()</li>
+        <li>showing becoz isshow()</li>
+        <li>last bcoz isPlay()=false afterwards</li>
+        <li *ngIf="isPlay()">last bcoz isPlay()=false afterwards</li>
+        <li>showing becoz isshow() && not using isPlay()</li>
+        <li *ngIf="!isPlay()">showing bcoz using, 
+             <span>
+                <b style="color: rgb(0, 0, 0); font-size: larger; 
+                    font-weight: bolder;">!
+                </b>
+            </span>isPlay()</li>
+    </ul>
+    <p style="background-color: whitesmoke; color: black;">
+        <span ><u style="background-color: whitesmoke; color: black;">how to use else statement with ngIf: </u></span><br><br>
+        &lt;div *ngIf=""; else <b><u style="background-color: brown;">elseBlock</u></b>
+          (you can give any name -- 'elseBlock')&gt; <br>
+                 // Do your if block here
+        <br>
+        &lt;/div&gt; <br><br>
+        &lt;ng-template <b><u style="background-color: brown;">#elseBlock</u></b>
+          (whatever name given in *ngIf)&gt;<br>
+             //do else block code 
+        <br>
+        &lt;/ng-template&gt;
+    </p>
+</div>

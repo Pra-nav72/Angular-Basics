@@ -1,12 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { StructuralDirective } from './structural-directive/structural-directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, StructuralDirective],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('app-3');
+  isUser= signal(true);
+  names = signal(["Ram", "Shyam", "Mohan"]);
+  colorRed = "Red";
+  colorViolet = "BlueViolet";
 }
