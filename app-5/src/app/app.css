@@ -1,0 +1,23 @@
+.div-first{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 2vw 4vw;
+    background-color: rgb(100, 20, 47);
+    color: white;
+}
+p{
+    font-size: medium;
+}
+li{
+    font-size: large;
+}
+
+.counter-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: aquamarine;
+}
