@@ -1,9 +1,22 @@
 <h1>FORM GROUPING</h1>
 <form  [formGroup]="signUp" (ngSubmit)="handleSignUp()" method="post">
-    
-    <input type="text" formControlName="name" placeholder="name"><br><br>
+   
+    <br><br>
+    <input type="text" formControlName="name" placeholder="name">
+    <!-- if name hasError(validated in .ts) & the input was clicked(focused) at least once -->
+    @if(name?.hasError('required') && name?.touched){
+        <span class="error">the name input field is required!</span>
+    }
+    <br><br>
 
-    <input type="text" placeholder="email" formControlName="email"><br><br>
+    <input type="text" placeholder="email" formControlName="email">
+    @if((email?.hasError('required') && email?.touched)){
+        <span class="error">the email input field is required!</span>
+    }
+    @if(email?.errors?.['email'] && email?.touched){
+        <span class="error">invalid email!</span>
+    }
+    <br><br>
     <label>
         <input type="radio"  formControlName="gender" value="male" checked>male
     </label>
@@ -12,9 +25,22 @@
     </label>
     <label>
         <input type="radio"  formControlName="gender" value="other" checked>other
-    </label><br><br>
-    <input type="password" placeholder="password"  formControlName="password"><br><br>
-    <button type="submit">sign up</button>
+    </label>
+   
+    <br><br>
+    <input type="password" placeholder="password"  formControlName="password">
+    @if((password?.hasError('required') && password?.touched)){
+        <span class="error">the password input field is required!</span>
+    }
+    @if((password?.errors?.['minlength'] && password?.touched)){
+        <span class="error">minimum 8 characters is required!</span>
+    }
+    @if((password?.errors?.['maxlength'] && password?.touched)){
+        <span class="error">maximum 16 characters is allowed!</span>
+    }
+    <br><br>
+    <!-- the button will be disabled until the input is valid -->
+    <button type="submit" [disabled]="signUp.invalid">sign up</button>
 </form>
 <p>----------------------</p>
 <ul>
