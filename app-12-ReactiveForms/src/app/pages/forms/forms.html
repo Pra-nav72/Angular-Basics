@@ -1,0 +1,24 @@
+<h1>FORM GROUPING</h1>
+<form  [formGroup]="signUp" (ngSubmit)="handleSignUp()" method="post">
+    
+    <input type="text" formControlName="name" placeholder="name"><br><br>
+
+    <input type="text" placeholder="email" formControlName="email"><br><br>
+    <label>
+        <input type="radio"  formControlName="gender" value="male" checked>male
+    </label>
+    <label>
+        <input type="radio"  formControlName="gender" value="female" checked>female
+    </label>
+    <label>
+        <input type="radio"  formControlName="gender" value="other" checked>other
+    </label><br><br>
+    <input type="password" placeholder="password"  formControlName="password"><br><br>
+    <button type="submit">sign up</button>
+</form>
+<p>----------------------</p>
+<ul>
+    <li>Name: {{signUp.value.name}} </li>
+    <li>email: {{signUp.value.email}} </li>
+    <li>gender: {{signUp.value.gender}} </li>
+</ul>
