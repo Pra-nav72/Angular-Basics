@@ -1,0 +1,14 @@
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 3rem;
+    color: green;
+}
