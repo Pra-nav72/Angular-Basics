@@ -1,0 +1,12 @@
+<h1>Reactive Forms</h1>
+<hr>
+<!-- (step-1.2) binding this input fields with email & password(app.ts) -->
+<input type="text" placeholder="email@xyz.com" [formControl]="email">
+<br><br>
+<input type="password" placeholder="password" [formControl]="password">
+<br><br>
+<button (click)="logThis()">login</button>
+<button (click)="reset()">reset</button>
+<hr><br>
+<h3>email: {{email.value}}</h3>
+<h3>password: {{password.value}}</h3>
